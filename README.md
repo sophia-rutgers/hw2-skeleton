@@ -1,7 +1,7 @@
 # HW2 Skeleton
 
-[![Build
-Status](https://travis-ci.org/ucsf-bmi-203-2017/hw2-skeleton.svg?branch=master)](https://travis-ci.org/ucsf-bmi-203-2017/hw2-skeleton)
+BUILD STATUS:
+https://travis-ci.org/sophia-rutgers/
 
 Skeleton for clustering project.
 

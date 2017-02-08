@@ -23,6 +23,7 @@ def read_active_sites(dir):
     return active_sites
 
 
+# greyson's modifications
 def read_active_site(filepath):
     """
     Read in a single active site given a PDB file
@@ -43,8 +44,13 @@ def read_active_site(filepath):
     # open pdb file
     with open(filepath, "r") as f:
         # iterate over each line in the file
+        loop_count=0
+        prev = '-1'
         for line in f:
-            if line[0:3] != 'TER':
+            curr = line[21:22]
+            if loop_count ==0:
+                prev = curr
+            if line[0:4] == 'ATOM' and prev == curr:
                 # read in an atom
                 atom_type = line[13:17].strip()
                 x_coord = float(line[30:38])
@@ -64,9 +70,12 @@ def read_active_site(filepath):
                 # add the atom to the residue
                 residue.atoms.append(atom)
 
-            else:  # I've reached a TER card
+                prev = curr
+            elif line[0:3] == 'TER': # reached TER card
                 active_site.residues.append(residue)
-
+            else:
+                break
+            loop_count += 1
     return active_site
 
 
