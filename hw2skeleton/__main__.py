@@ -5,7 +5,7 @@ import os
 from .io import read_active_sites, write_clustering, write_mult_clusterings
 from .cluster import *
 from utils import *
-import numpy as np,matplotlib.pyplot as plt, cPickle as pic
+import numpy as np, cPickle as pic
 from prody import *
 
 # Some quick stuff to make sure the program is called correctly

@@ -1,6 +1,6 @@
 from __future__ import division
 from .utils import Atom, Residue, ActiveSite
-import numpy as np, matplotlib.pyplot as plt
+import numpy as np
 from prody import *
 import re
 import cPickle as pic
