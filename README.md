@@ -1,7 +1,7 @@
 # HW2 Skeleton
 
 BUILD STATUS:
-https://travis-ci.org/sophia-rutgers/
+https://travis-ci.org/sophia-rutgers/hw2-skeleton
 
 Skeleton for clustering project.
 
